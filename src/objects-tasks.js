@@ -134,12 +134,8 @@ function makeImmutable(obj) {
  *    makeWord({ a: [0, 1], b: [2, 3], c: [4, 5] }) => 'aabbcc'
  *    makeWord({ H:[0], e: [1], l: [2, 3, 8], o: [4, 6], W:[5], r:[7], d:[9]}) => 'HelloWorld'
  */
-function makeWord(lettersObject) {
-  let res = '';
-  Object.keys(lettersObject).forEach((key) => {
-    res = res.concat(key);
-  });
-  return res;
+function makeWord(/* lettersObject */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -176,7 +172,7 @@ function sellTickets(/* queue */) {
 function Rectangle(width, height) {
   this.width = width;
   this.height = height;
-  this.getArea = function () {
+  this.getArea = function getArea() {
     return width * height;
   };
 }
@@ -286,12 +282,8 @@ function sortCitiesArray(arr) {
  *    "Poland" => ["Lodz"]
  *   }
  */
-function group(array, keySelector, valueSelector) {
-  const res = Object.groupBy(array, keySelector);
-  Object.keys(res).forEach((key) => {
-    res[key] = res[key].map(valueSelector);
-  });
-  return res;
+function group(/* array, keySelector, valueSelector */) {
+  throw new Error('Not implemented');
 }
 
 /**
